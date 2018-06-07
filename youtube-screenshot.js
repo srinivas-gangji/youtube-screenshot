@@ -9,6 +9,8 @@
     canvas.width = parseInt(video.style.width);
     canvas.height =  parseInt(video.style.height);
     ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+    var dataURL = canvas.toDataURL('image/jpeg');
+    console.log(dataURL);
 
-    window.open(canvas.toDataURL('image/jpeg'));
+    window.open(dataURL);
 })(window, document)
